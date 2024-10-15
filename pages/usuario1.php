@@ -6,7 +6,7 @@ include 'includes/menu_usuario.php';
 <br>
     <section id="hero">
         <h1>aprende a crear tu album <br>con los Mejores</h1>
-        <button>CREA YA!</button>
+        <button>CREA YA este albun!</button>
     </section>
 
     <section id="somos-proya">
