@@ -1,0 +1,106 @@
+/* styles.css */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-item {
+    margin: 20px;
+}
+
+.image-item img {
+    cursor: pointer;
+    width: 200px;
+    height: 150px;
+    object-fit: contain; /* Asegura que la imagen mantenga proporciones sin distorsionarse */
+    user-select: none; /* Para la selección de texto */
+    -webkit-user-select: none; /* Para Safari 3.1+ y Safari en iOS */
+    -moz-user-select: none;    /* Para Firefox */
+    -ms-user-select: none;     /* Para Internet Explorer/Edge */
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center; /* Centrar contenido horizontalmente */
+    align-items: center;     /* Centrar contenido verticalmente */
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar contenido del modal */
+    max-width: 90%; /* Ajustar ancho para que no se desborde */
+    max-height: 90%; /* Ajustar alto para que no se desborde */
+}
+
+.modal-content img {
+    max-width: 100%; /* Asegurar que la imagen no se desborde */
+    max-height: 80vh; /* Ajustar la altura máxima */
+    transition: transform 0.25s ease; /* Transición para el zoom */
+}
+
+/* Controles del slider */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Controles de zoom */
+.zoom-controls {
+    margin-top: 10px;
+}
+
+.zoom-controls button {
+    font-size: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.like-btn {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #888; /* Color cuando no está marcado */
+    transition: color 0.3s ease;
+    margin-top: 10px;
+}
+
+.like-btn.liked {
+    color: red; /* Cambia a rojo cuando está marcado */
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    transition: transform 0.25s ease;
+}
+
+.zoom-controls {
+    margin-top: 10px;
+}
+
+.zoom-controls button {
+    font-size: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}

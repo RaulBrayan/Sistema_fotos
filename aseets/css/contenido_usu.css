@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* SECCION HERO */
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/img/hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+#hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+#hero button {
+    padding: 15px 30px;
+    background-color: #ff6347;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#hero button:hover {
+    background-color: #e0533d;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* SECCION SOMOS-PROYA */
+#somos-proya .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+}
+
+#somos-proya .img-container {
+    width: 100%;
+    height: 300px;
+    background-image: url('../assets/img/team.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+#somos-proya h2 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+#somos-proya p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* SECCION NUESTROS PROGRAMAS */
+#nuestros-programas {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+}
+
+#nuestros-programas h2 {
+    text-align: center;
+    font-size: 2.8em;
+    margin-bottom: 40px;
+    color: #444;
+}
+
+.programas {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.carta {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+    min-width: 280px;
+    margin: 20px 10px;
+    transition: transform 0.3s ease;
+}
+
+.carta:hover {
+    transform: scale(1.05);
+}
+
+.carta h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.carta p {
+    font-size: 1.1em;
+    color: #777;
+}
+
+.carta button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carta button:hover {
+    background-color: #45a045;
+}
+
+/* SECCION CARACTERISTICAS */
+#caracteristicas {
+    background-color: #222;
+    color: white;
+    padding: 50px 20px;
+}
+
+#caracteristicas ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#caracteristicas li {
+    font-size: 1.5em;
+    margin: 15px 30px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+/* SECCION FINAL */
+#final {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #282828;
+    color: white;
+}
+
+#final h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#final button {
+    padding: 15px 40px;
+    font-size: 1.5em;
+    background-color: #ff6347;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#final button:hover {
+    background-color: #e0533d;
+}
+
+/* MEDIA QUERIES PARA RESPONSIVE */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.5em;
+    }
+    
+    .programas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carta {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #somos-proya .container, #nuestros-programas .container {
+        flex-direction: column;
+    }
+
+    #somos-proya .texto, #somos-proya .img-container {
+        width: 100%;
+    }
+}
